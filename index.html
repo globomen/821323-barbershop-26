@@ -14,11 +14,11 @@
           <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
         </a>
         <ul>
-          <li><a href="">Информация</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Прайс-лист</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Прайс-лист</a></li>
           <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="">Контакты</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
         <ul>
           <li>
@@ -28,7 +28,7 @@
       </nav>
     </header>
     <main>
-      <h1 class="hidden">Барбершоп «Бородинский»</h1>
+      <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
       <section>
         <h2>Преимущества</h2>
         <ul>
@@ -57,12 +57,16 @@
             <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
             <time datetime="2016-01-18">18 января</time>
           </li>
-          <a href="">Все новости</a>
         </ul>
+        <a href="#">Все новости</a>
       </section>
       <section>
         <h2>Фотогалерея</h2>
-        <figure><a href=""><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a></figure>
+        <figure>
+          <a href="#">
+            <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
+          </a>
+        </figure>
         <button type="button">Назад</button>
         <button type="button">Вперед</button>
       </section>
@@ -74,42 +78,76 @@
         <p>Время работы: <br>
           пн—пт: с 10:00 до 22:00 <br>
           сб—вс: с 10:00 до 19:00</p>
-        <a href="">Как проехать</a>
-        <a href="">Обратная связь</a>
+        <a href="#">Как проехать</a>
+        <a href="#">Обратная связь</a>
       </section>
       <section>
         <h2>Записаться</h2>
         <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <!-- Здесь будет форма -->
-        <button type="button">Отправить</button>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <p>
+            <label for="appointment-date">Дата</label>
+            <input id="appointment-date" type="text" name="date" placeholder="08.10.2017">
+          </p>
+          <p>
+            <label for="appointment-time">Время</label>
+            <input id="appointment-time" type="text" name="time" placeholder="10:00">
+          </p>
+          <p>
+            <label for="appointment-name">Ваше имя</label>
+            <input id="appointment-name" type="text" name="name" placeholder="Борода">
+          </p>
+          <p>
+            <label for="appointment-phone">Телефон</label>
+            <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
     <footer>
       <p>Барбершоп «Бородинский» Адрес: <br>
         г. Санкт-Петербург, Б. Конюшенная, д. 19/8 <br>
-        <a href="">Как нас найти?</a> <br>
+        <a href="#">Как нас найти?</a> <br>
         Телефон: +7 (812) 666-02-66</p>
       <div>
         <p>Давайте дружить!</p>
         <ul>
-          <li><a href="">Вконтакте</a></li>
-          <li><a href="">Фейсбук</a></li>
-          <li><a href="">Инстаграм</a></li>
+          <li><a href="#">Вконтакте</a></li>
+          <li><a href="#">Фейсбук</a></li>
+          <li><a href="#">Инстаграм</a></li>
         </ul>
       </div>
       <p>Разработано:
         <a href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
-    <section class="hidden">
+    <section class="visually-hidden">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label for="user-login">Логин</label>
+          <input id="user-login" type="text" name="login" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-password">Пароль</label>
+          <input id="user-password" type="password" name="password" placeholder="********">
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="remember">
+            Запомните меня
+          </label>
+          <a href="#">Я забыл пароль!</a>
+        </p>
+        <button type="submit">Войти</button>
+      </form>
       <button type="button">Закрыть</button>
     </section>
-    <section class="hidden">
+    <section class="visually-hidden">
       <h2>Как до нас добраться</h2>
-      <img src="img/map.png" width="766" height="560" alt="Барбершоп «Бородинский» Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8">
+      <img src="img/map.png" width="766" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       <button type="button">Закрыть</button>
     </section>
   </body>
